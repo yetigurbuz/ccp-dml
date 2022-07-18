@@ -6,7 +6,6 @@ Implements many dml methods and provides a benchmarking framework.
 
 A detailed guide will be prepared soon.
 
-**framework folder:** metric_learning
 
 
 # requirements:
