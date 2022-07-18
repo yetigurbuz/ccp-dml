@@ -11,6 +11,7 @@ A detailed guide will be prepared soon.
 
 # requirements:
 tensorflow >= 2.8
+
 yaml, numpy, PIL, sklearn, scipy, matplotlib, imageio, pprint
 
 # instructions:
