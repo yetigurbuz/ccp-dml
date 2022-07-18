@@ -1,0 +1,31 @@
+---
+base: dml_default.yaml
+
+training:
+  steps_per_epoch: 250
+  max_epochs: 10000
+  early_stopping_patience: 60
+  warm_start: 0
+  freeze_during_warmup: true
+  classes_per_batch: 8
+  sample_per_class: 4
+
+validation:
+  batch_size: 128
+
+
+loss:
+
+  xbm:
+    function: original_contrastive
+    batches_in_mem: 400
+    start_at: 1000
+    xbm_weight: 1.0
+    pair_loss_weight: 1.0
+
+  ccp:
+    function: contrastive
+    proxy_per_class: 4
+    representative_pool_size: 7
+    proxy_sampling_batch_size: 128
+

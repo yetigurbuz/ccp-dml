@@ -1,0 +1,42 @@
+---
+model:
+  num_models: 4
+  backbone:
+    arch: BNInception
+
+  embedding_head:
+    embedding_size: 128
+
+    GlobalPooling:
+      l2_normalize: false
+      use_average: true
+      use_max: false
+
+loss:
+
+  computation_head:
+    normalize_embeddings: true
+    avg_nonzero_only: true
+    distance_function: l2
+    lipschitz_cont: true
+
+optimizer:
+
+  method: Adam
+  learning_rate: 1.0e-5
+
+  learning_rate_scheduler:
+    method: constant
+
+
+training:
+  steps_per_epoch: 100
+  max_epochs: 10000
+  early_stopping_patience: 10
+  warm_start: 0
+  freeze_during_warmup: false
+  classes_per_batch: 8
+  sample_per_class: 4
+
+validation:
+  batch_size: 128

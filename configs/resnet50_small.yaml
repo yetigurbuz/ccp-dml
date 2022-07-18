@@ -1,0 +1,32 @@
+---
+base: conventional_resnet50_default.yaml
+
+model:
+  embedding_head:
+    arch: GlobalPooling
+
+loss:
+  function: contrastive # contrastive, original_contrastive, triplet, multi_similarity, xbm
+  xbm:
+    function: original_contrastive
+    batches_in_mem: 25
+    start_at: 1000
+    xbm_weight: 1.0
+    pair_loss_weight: 1.0
+
+  ccp:
+    function: contrastive
+    proxy_per_class: 8
+    representative_pool_size: 12
+    proxy_sampling_batch_size: 128
+
+training:
+  early_stopping_patience: 15
+  steps_per_epoch: 25
+
+optimizer:
+  learning_rate: 1.0e-5
+  learning_rate_scheduler:
+    reduce_on_plateau:
+      patience: 4
+
