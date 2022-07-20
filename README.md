@@ -16,7 +16,7 @@ yaml, numpy, PIL, sklearn, scipy, matplotlib, imageio, pprint
 # instructions:
 (1) put custom config files in ./metric_learning/configs
 
-(2) run >python trainModel.py command with arguments within ./metric_learning folder
+(2) run >python trainModel.py command with arguments
 
 (2.1) dataset can be passes as an argument
 
