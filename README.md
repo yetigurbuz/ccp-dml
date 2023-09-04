@@ -24,4 +24,4 @@ yaml, numpy, PIL, sklearn, scipy, matplotlib, imageio, pprint
 
 (3) different configurations can be experimented by changing related .yaml files
 
-# [supplementary](https://github.com/yetigurbuz/xml-dml/blob/main/appendix.pdf)
+# [supplementary](https://github.com/yetigurbuz/ccp-dml/blob/main/supplemental_material.pdf)
