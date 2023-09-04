@@ -23,3 +23,5 @@ yaml, numpy, PIL, sklearn, scipy, matplotlib, imageio, pprint
 (2.2) dataset is downloaded automatically
 
 (3) different configurations can be experimented by changing related .yaml files
+
+# [supplementary](https://github.com/yetigurbuz/xml-dml/blob/main/appendix.pdf)
